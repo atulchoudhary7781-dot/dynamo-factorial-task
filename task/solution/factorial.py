@@ -14,6 +14,8 @@ def main():
             
         result = math.factorial(num)
         print(result)
+        with open('/app/output.txt', 'w') as f:
+            f.write(str(result))
     except ValueError:
         print("Invalid input - must be an integer")
         sys.exit(1)
